@@ -79,7 +79,7 @@ const Hero = () => {
   };
 
   const bio = `
-    My name is Akoragye Osbert, a Ugandan male born on 12th November 2003 in Kabobo Village, Rukungiri District. I am a self-motivated, passionate, and community-driven individual with strong leadership, entrepreneurship, and communication skills. Currently pursuing a Diploma in Computer Science at Uganda Institute of Information Technology (UICT), I have actively served in various leadership positions, including National Coordinator at Bombi Academic Guidance and Advice Conference and Head of Publicity for United Nations Youth Community Clubs (UNYCC). I am also the founder of UGANDA UNIVERSITY STUDENTS ON X (UUSOX), an initiative aimed at empowering university students through leadership, networking, and career growth. With a background in managing multiple social media platforms and influencing for several brands, I am dedicated to giving back to my community with integrity, teamwork, and professionalism. I am fluent in English and Runyankole-Rukiga.
+    My name is Akoragye Osbert, a Ugandan male born on 12th November 2003 in Kabobo Village, Rukungiri District. I am a self-motivated, passionate, and community-driven individual with strong leadership, entrepreneurship, and communication skills. Currently pursuing a Diploma in Computer Science at Uganda Institute of Information and Technology (UICT), I have actively served in various leadership positions, including National Coordinator at Bombi Academic Guidance and Advice Conference and Head of Publicity for United Nations Youth Community Clubs (UNYCC). I am also the founder of UGANDA UNIVERSITY STUDENTS ON X (UUSOX), an initiative aimed at empowering university students through leadership, networking, and career growth. With a background in managing multiple social media platforms and influencing for several brands, I am dedicated to giving back to my community with integrity, teamwork, and professionalism. I am fluent in English and Runyankole-Rukiga.
   `;
 
   return (
@@ -190,17 +190,17 @@ const Hero = () => {
             animate='visible'
             exit='exit'
           >
-            <div className='relative w-full h-full'>
+            <div className='relative w-full h-full max-w-4xl'>
               <motion.img
                 key={modalImageIndex}
                 src={images[modalImageIndex]}
                 alt={`Modal Slide ${modalImageIndex + 1}`}
-                className='absolute inset-0 w-full h-full object-cover opacity-40'
+                className='w-full h-1/2 object-cover'
                 initial={{ opacity: 0 }}
-                animate={{ opacity: 0.4 }}
+                animate={{ opacity: 1 }}
                 transition={{ duration: 1 }}
               />
-              <motion.div className='bg-indigo-900 bg-opacity-80 p-6 rounded-lg shadow-lg max-w-md sm:max-w-lg md:max-w-xl w-full text-white relative'>
+              <motion.div className='bg-indigo-900 bg-opacity-90 p-6 rounded-b-lg shadow-lg w-full text-white'>
                 <button
                   onClick={() => setShowBio(false)}
                   className='absolute top-4 right-4 text-white text-2xl font-bold'
