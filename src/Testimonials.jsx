@@ -3,29 +3,37 @@ import { motion } from 'framer-motion';
 import testimonial1 from './assets/images/test1.jpg';
 import testimonial2 from './assets/images/test2.jpg';
 import testimonial3 from './assets/images/test3.jpg';
+import testimonial4 from './assets/images/test4.jpg';
 
 const Testimonials = () => {
   const testimonials = [
     {
       name: 'Asiimwe Rhinah',
-      role: 'Director, Karoth Kids Foundation',
+      role: 'UUSOX Executive',
       quote:
-        'Akoragye Osbert is a true definition of leadership with heart. His passion for uplifting youth voices and creating spaces for students to express themselves is unmatched. Every project he touches leaves a lasting impact. I’m proud to be part of his circle!',
+        'Akoragye Osbert is a true definition of leadership with heart. His passion for uplifting youth voices and creating spaces for students to express themselves is unmatched. Every project he touches leaves a lasting impact. I’m proud to be part of his circle!',
       image: testimonial1,
     },
     {
       name: 'Akamumpa Lehman',
-      role: 'Director, Lens Crafted Images',
+      role: 'UUSOX Executive',
       quote:
-        'Working with Akoragye Osbert has been one of the most inspiring experiences of my life. His creativity, ambition, and unstoppable drive to create opportunities for others make him a force to reckon with. Osbert isn’t just a leader — he’s a movement',
+        'Working with Akoragye Osbert has been one of the most inspiring experiences of my life. His creativity, ambition, and unstoppable drive to create opportunities for others make him a force to reckon with. Osbert isn’t just a leader — he’s a movement.',
       image: testimonial2,
     },
     {
       name: 'Ahumuza Bells',
-      role: 'Community Leader',
+      role: 'UUSOX Executive',
       quote:
-        'Your work matters! I have someone eagerly awaiting your next project, and I’ve assured them you’ll deliver the best. They’re ready to offer you a major project for their company.',
-      image: testimonial3, // Assumes testimonial3 is an imported image, e.g., import testimonial3 from './assets/images/testimonial3.jpg';
+        'Working with Akoragye Osbert has been one of the most inspiring experiences of my life. His creativity, ambition, and unstoppable drive to create opportunities for others make him a force to reckon with. Osbert isn’t just a leader — he’s a movement.',
+      image: testimonial3,
+    },
+    {
+      name: 'AKIZA BRAIN', // Placeholder name; replace with the actual name if known
+      role: 'CEO SERVCHAIN LIMITED', // Placeholder role; replace if known
+      quote:
+        "Akoragye Osbert is a born trailblazer. His commitment to community growth, student empowerment, and positive change speaks volumes about the leader he is becoming. Every initiative he leads carries a spark of brilliance and a heart for the people. Uganda's youth are blessed to have a champion like him.",
+      image: testimonial4,
     },
   ];
 
