@@ -15,6 +15,7 @@ import profileImg from './assets/images/imge4.jpg';
 const Hero = () => {
   const [currentImage, setCurrentImage] = useState(0);
   const [showBio, setShowBio] = useState(false);
+  const [modalImageIndex, setModalImageIndex] = useState(0);
   const images = [img1, img2, img3];
 
   const socialLinks = [
@@ -47,6 +48,15 @@ const Hero = () => {
     }, 3000);
     return () => clearInterval(interval);
   }, [images.length]);
+
+  useEffect(() => {
+    if (showBio) {
+      const modalInterval = setInterval(() => {
+        setModalImageIndex((prev) => (prev + 1) % images.length);
+      }, 3000);
+      return () => clearInterval(modalInterval);
+    }
+  }, [showBio]);
 
   const textVariants = {
     hidden: { opacity: 0, x: -100 },
@@ -180,16 +190,27 @@ const Hero = () => {
             animate='visible'
             exit='exit'
           >
-            <motion.div className='bg-indigo-900 p-6 rounded-lg shadow-lg max-w-md w-full text-white relative'>
-              <button
-                onClick={() => setShowBio(false)}
-                className='absolute top-4 right-4 text-white text-2xl font-bold'
-              >
-                ×
-              </button>
-              <h2 className='text-3xl font-bold mb-4'>About Me</h2>
-              <p className='text-lg leading-relaxed'>{bio}</p>
-            </motion.div>
+            <div className='relative w-full h-full'>
+              <motion.img
+                key={modalImageIndex}
+                src={images[modalImageIndex]}
+                alt={`Modal Slide ${modalImageIndex + 1}`}
+                className='absolute inset-0 w-full h-full object-cover opacity-40'
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 0.4 }}
+                transition={{ duration: 1 }}
+              />
+              <motion.div className='bg-indigo-900 bg-opacity-80 p-6 rounded-lg shadow-lg max-w-md sm:max-w-lg md:max-w-xl w-full text-white relative'>
+                <button
+                  onClick={() => setShowBio(false)}
+                  className='absolute top-4 right-4 text-white text-2xl font-bold'
+                >
+                  ×
+                </button>
+                <h2 className='text-3xl font-bold mb-4'>About Me</h2>
+                <p className='text-lg leading-relaxed'>{bio}</p>
+              </motion.div>
+            </div>
           </motion.div>
         )}
       </AnimatePresence>
